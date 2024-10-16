@@ -19,6 +19,11 @@ const PORT = config.port;
 //     })
 // })
 
+app.get("/hello", (req, res) => {
+    res.json({
+        message: "hello"
+    })
+})
 // console.log("Express app is running")
 app.get("*", async (req, res) => {
     res.send(await handler(req, "hello"))
