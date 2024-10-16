@@ -1,1 +1,1 @@
-{"root":["./src/config.ts","./src/index.ts","./src/controller/index.ts","./src/lib/telegram.ts"],"version":"5.6.3"}
+{"root":["./src/config.ts","./src/index.ts","./src/controller/index.ts","./src/lib/telegram.ts","./src/netlify/functions/api.ts"],"version":"5.6.3"}

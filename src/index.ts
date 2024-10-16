@@ -2,12 +2,24 @@ import express from "express"
 import config from "./config";
 import { handler } from "./controller";
 
-const app = express();
+export const app = express();
 
 app.use(express.json());
+app.use((req, res, next) => {
+    console.log(req.method, req.path);
+    next();
+})
 
 const PORT = config.port;
 
+// app.get("/xyz", (req, res) => {
+//     console.log("xyz")
+//     res.json({
+//         message: "hellllodasj"
+//     })
+// })
+
+// console.log("Express app is running")
 app.get("*", async (req, res) => {
     res.send(await handler(req, "hello"))
 })
