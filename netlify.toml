@@ -1,11 +1,12 @@
 [dev]
 command = "npm run dev"
 port = 8888
-targetPort = 3000
+targetPort = 4040
 
 [functions]
 external_node_modules = ["express"]
 node_bundler = "esbuild"
+
 [[redirects]]
 force = true
 from = "/api/*"
