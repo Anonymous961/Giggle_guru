@@ -31,10 +31,7 @@ export async function handleMessage(messageObj: any) {
             case "joke": {
                 const joke = await getJoke();
                 if (joke.type === "twopart") {
-                    sendMessage(messageObj, joke.setup)
-                    // setTimeout(() => { // netlify is unable to handle this
-                    sendMessage(messageObj, joke.delivery)
-                    // }, 4000);
+                    sendMessage(messageObj, `${joke.setup}\n${joke.delivery}`)
                 } else {
                     sendMessage(messageObj, joke.joke)
                 }
