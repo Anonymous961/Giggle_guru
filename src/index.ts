@@ -37,6 +37,6 @@ app.post("*", async (req, res) => {
     res.send(await handler(req, "hello"))
 })
 
-app.listen(4040, () => {
-    console.log(`Server is running on http://localhost:${4040}`)
-})
+// app.listen(4040, () => {
+//     console.log(`Server is running on http://localhost:${4040}`)
+// })
